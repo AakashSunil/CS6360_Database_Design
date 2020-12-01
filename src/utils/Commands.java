@@ -186,14 +186,14 @@ public class Commands {
             result[0] = Statements.SYNTAX_ERROR;
             return result;
         }
-        String tableName = insertTokens.get(2);
+        String tableName = insertTokens.get(3);
         if (tableName.trim().length() == 0) {
             System.out.println(Statements.TABLE_NAME_EMPTY);
             result[0] = Statements.TABLE_NAME_EMPTY;
             return result;
         }
         else {
-            String value_list = insertTokens.get(5);
+            String value_list = insertTokens.get(6);
             String values = value_list.replaceAll("[()]", "");
             result[0] = tableName;
             result[1] = values;
