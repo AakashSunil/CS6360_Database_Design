@@ -13,11 +13,12 @@ public class Application {
        Statements.splashScreen();
        String userCommand = "";
        Scanner scanner = new Scanner(System.in).useDelimiter(";");
+       Commands commands = new Commands();
 
        while (!Settings.isExit()) {
            System.out.print(Settings.getPrompt());
            userCommand = scanner.next().replace("\n", " ").replace("\r", "").trim().toLowerCase();
-           Commands.parseUserCommand(userCommand);
+           commands.parseUserCommand(userCommand);
        }
        System.out.println("Exiting.....");
        System.out.println(Statements.EXIT);

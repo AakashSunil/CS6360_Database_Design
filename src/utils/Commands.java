@@ -7,10 +7,29 @@ import java.util.List;
 import Storage.Database;
 
 public class Commands {
-    public static void parseUserCommand(String userCommand) {
+    Database database = new Database();
 
-        Database database = new Database();
+    public Commands() {
         database.initial();
+    }
+
+    public static void printStringArrayList(ArrayList<String> stringArrayList) {
+        for (String s : stringArrayList) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+    }
+
+    public static void print2DStringArrayList(ArrayList<ArrayList<String>> string2DArrayList) {
+        for (ArrayList<String> list : string2DArrayList) {
+            for (String s : list) {
+                System.out.print(s + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void parseUserCommand(String userCommand) {
         // database.createTable("student",
         //         new ArrayList<>(Arrays.asList("name", "age", "gender")));
         // database.insertRowIntoTable("student",
@@ -38,13 +57,20 @@ public class Commands {
         System.out.println(commandTokens);
         switch (commandTokens.get(0)) {
             case "show":
-                database.showTables();
+                printStringArrayList(database.showTables());
                 break;
             case "select":
                 String[] results = parseSelectQuery(userCommand);
                 
                 // System.out.println(results[0]+"\n"+new ArrayList<>(Arrays.asList(results[1].split(",")))+"\n"+results[2]+"\n"+results[3]);
-                database.queryInTable(results[0],new ArrayList<>(Arrays.asList(results[1].split(","))),results[2],results[3]);
+                print2DStringArrayList(
+                        database.queryInTable(
+                                results[0],
+                                new ArrayList<>(Arrays.asList(results[1].split(","))),
+                                results[2],
+                                results[3]
+                        )
+                );
                 break;
             case "drop":
                 System.out.println("Drop");
