@@ -11,36 +11,39 @@ public class Commands {
 
         Database database = new Database();
         database.initial();
-        database.createTable("Student",
-                new ArrayList<>(Arrays.asList("name", "age", "gender")));
-        database.insertRowIntoTable("Student",
-                new ArrayList<>(Arrays.asList("John", "24", "male")));
-        database.insertRowIntoTable("Student",
-                new ArrayList<>(Arrays.asList("Taylor", "23", "male")));
-        database.insertRowIntoTable("Student",
-                new ArrayList<>(Arrays.asList("Alice", "23", "female")));
-        database.deleteRowsFromTable("Student", "age", "24");
-        database.updateRowsInTable("Student", "age", "25",
-                "name", "Taylor");
+        // database.createTable("student",
+        //         new ArrayList<>(Arrays.asList("name", "age", "gender")));
+        // database.insertRowIntoTable("student",
+        //         new ArrayList<>(Arrays.asList("john", "24", "male")));
+        // database.insertRowIntoTable("student",
+        //         new ArrayList<>(Arrays.asList("taylor", "23", "male")));
+        // database.insertRowIntoTable("student",
+        //         new ArrayList<>(Arrays.asList("alice", "23", "female")));
+        // database.deleteRowsFromTable("student", "age", "24");
+        // database.updateRowsInTable("student", "age", "25",
+        //         "name", "taylor");
 
-        ArrayList<String> tableNameList = database.showTables();
-        ArrayList<ArrayList<String>> queryResult = database.queryInTable(
-                "Student",
-                new ArrayList<>(Arrays.asList("gender", "name")),
-                "gender",
-                "male"
-        );
+        // ArrayList<String> tableNameList = database.showTables();
+        
+        // ArrayList<ArrayList<String>> queryResult = database.queryInTable(
+        //         "student",
+        //         new ArrayList<>(Arrays.asList("gender", "name")),
+        //         "gender",
+        //         "male"
+        // );
 
         // database.exit();
 
         ArrayList<String> commandTokens = new ArrayList<String>(Arrays.asList(userCommand.split(" ")));
+        System.out.println(commandTokens);
         switch (commandTokens.get(0)) {
             case "show":
                 database.showTables();
                 break;
             case "select":
                 String[] results = parseSelectQuery(userCommand);
-                System.out.println(results[0]+"\n"+new ArrayList<>(Arrays.asList(results[1].split(",")))+"\n"+results[2]+"\n"+results[3]);
+                
+                // System.out.println(results[0]+"\n"+new ArrayList<>(Arrays.asList(results[1].split(",")))+"\n"+results[2]+"\n"+results[3]);
                 database.queryInTable(results[0],new ArrayList<>(Arrays.asList(results[1].split(","))),results[2],results[3]);
                 break;
             case "drop":
@@ -104,11 +107,13 @@ public class Commands {
                 break;
             case "exit":
             case "quit":
+                System.out.println("Quit");
                 database.exit();
                 Settings.setExit(true);
                 break;
             default:
                 Statements.errorCommand(userCommand);
+
                 break;
         }
     }

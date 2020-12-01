@@ -118,6 +118,7 @@ public class Database implements Serializable {
      * */
     public ArrayList<ArrayList<String>> queryInTable(String tableName, ArrayList<String> queryColumnNameList,
                              String condColumnName, String condValue) {
+        System.out.println(tableHashMap.get(tableName).query(queryColumnNameList, condColumnName, condValue));
         return tableHashMap.get(tableName).query(queryColumnNameList, condColumnName, condValue);
     }
 
