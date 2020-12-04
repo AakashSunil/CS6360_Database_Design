@@ -114,6 +114,7 @@ public class Commands {
                     System.out.println(result_update[0]+"\n"+ result_update[1]+"\n"+ result_update[2]+"\n"+ result_update[3]+"\n"+ result_update[4]);
                     database.updateRowsInTable(result_update[0], result_update[1],result_update[2], result_update[3], result_update[4]);
                 }
+                break;
             case "delete":
                 System.out.println("Delete");
                 String[] result_delete = parseDeleteTable(userCommand);
@@ -148,6 +149,11 @@ public class Commands {
 
 		// TODO: Before attempting to create new table file, check if the table already exists
 		
+        ArrayList<String> initialSplit = new ArrayList<String>(Arrays.asList(command.split("\\(")));
+        String first_part = initialSplit.get(0);
+        String columns = initialSplit.get(1);
+        System.out.println(first_part+"\n"+columns);
+
         ArrayList<String> createTableTokens = new ArrayList<String>(Arrays.asList(command.split(" ")));
         int i =0;
         boolean error = false;
@@ -166,7 +172,7 @@ public class Commands {
         }
         if(!error) {
             String column_names_tuple = createTableTokens.get(3);
-            String column_names = column_names_tuple.replaceAll("[()]", " ");
+            String column_names = column_names_tuple.replaceAll("[()]", "");
             String[] values = new String[4];
 
             values[0] = tableName;
@@ -207,7 +213,7 @@ public class Commands {
     public static String[] parseInsertTable(String command) {
         ArrayList<String> insertTokens = new ArrayList<String>(Arrays.asList(command.split(" ")));
         String[] result = new String[2];
-        if (!insertTokens.get(1).equals("into") || !command.contains(") values")) {
+        if (!insertTokens.get(1).equals("into") || !command.contains("values (")) {
             System.out.println(Statements.SYNTAX_ERROR);
             result[0] = Statements.SYNTAX_ERROR;
             return result;
@@ -219,7 +225,7 @@ public class Commands {
             return result;
         }
         else {
-            String value_list = insertTokens.get(6);
+            String value_list = insertTokens.get(5);
             String values = value_list.replaceAll("[()]", "");
             result[0] = tableName;
             result[1] = values;
