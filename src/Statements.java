@@ -43,30 +43,28 @@ public class Statements {
 		return bar;
 	}
 	public static void help() {
+
+        System.out.println("Available Querying commands");
         System.out.println(printSeparator("-", 90));
-        System.out.println("Available commands");
 
-        System.out.println("-  HELP;");
-        System.out.println("\tShows all the available help commands");
-        System.out.println("-  CREATE TABLE <table_name> (<column_name>);");
-        System.out.println("\tLets you create table in the database");
-        System.out.println("-  INSERT INTO <table_name> (<column_list>) VALUES (<values_list>);");
-        System.out.println("\tInsert appropriate values into given table. Column List order should be same as at the time of creation.");
-        System.out.println("-  SELECT <column_list> FROM <table_name> [WHERE <condition>];");
-        System.out.println("\tDisplay the values from the table with or without a condition");
-        System.out.println("-  SHOW TABLES;");
-        System.out.println("\tDisplay all the available tables in the database");
-        System.out.println("-  DROP TABLE <table_name>;");
-        System.out.println("\tDeletes table from the database");
-        System.out.println("-  DELETE FROM TABLE <table_name> WHERE <condition>;");
-        System.out.println("\tDeletes specific table row table from the database");
-        System.out.println("-  UPDATE <table_name> SET <column_name> = <value> WHERE <condition>;");
-        System.out.println("\tUpdates particular column value in table from the database based on the condition;");
-        System.out.println("-  VERSION;");
-        System.out.println("\t Displays the Version of the software");
-        System.out.println("-  EXIT;");
-        System.out.println("\tSafely EXIT the Database");
-
+        System.out.println("HELP;");
+        System.out.println("Shows all the available help commands\n");
+        System.out.println("CREATE TABLE <table_name> (<column_name> <datatype>);");
+        System.out.println("Creates a table in the database\n");
+        System.out.println("INSERT INTO <table_name> (<column_name_list>) VALUES (<values_list>);");
+        System.out.println("Insert values into given table\n");
+        System.out.println("SELECT <column_list> FROM <table_name> [WHERE <condition>];");
+        System.out.println("Display the values from the table with or without a condition\n");
+        System.out.println("SHOW TABLES;");
+        System.out.println("Displays all the available tables in the database\n");
+        System.out.println("DROP TABLE <table_name>;");
+        System.out.println("Deletes table from the database\n");
+        System.out.println("DELETE FROM TABLE <table_name> WHERE <condition>;");
+        System.out.println("Deletes specific table row table from the database\n");
+        System.out.println("UPDATE <table_name> SET <column_name> = <value> WHERE <condition>;");
+        System.out.println("Updates particular column value in table from the database based on the condition\n");
+        System.out.println("EXIT;");
+        System.out.println("Safely EXIT the Database\n");
         System.out.println(printSeparator("-", 90));
     }
 
