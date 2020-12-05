@@ -1,4 +1,4 @@
-package utils;
+package Utilities;
 
 public class Settings {
     static String prompt = "davisql> ";

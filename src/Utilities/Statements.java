@@ -1,13 +1,29 @@
-package utils;
+package Utilities;
+
 
 public class Statements {
     public static final String EXIT = "Safely Exited from DavisBase.";
-    public static final String SYNTAX_ERROR = "--   Syntax Error";
-    public static final String TABLE_NAME_EMPTY = "--   Table Name Cannot be Empty";
-    public static final String ERROR_INSERTING = "--    Error while Inserting";
-    public static final String ERROR_CREATING_TABLE = "--   Error Creating Table";
-    public static final String INDEX_ERROR = "--    Error Creating Index";
-    public static final String INVALID_COMMAND = "--    Invalid Command: \"";
+    public static final String SYNTAX_ERROR = "Syntax Error";
+    public static final String TABLE_NAME_EMPTY = "Table Name Cannot be Empty";
+    public static final String ERROR_INSERTING = "Error while Inserting";
+    public static final String ERROR_CREATING_TABLE = "Error Creating Table";
+    public static final String INDEX_ERROR = "Error Creating Index";
+    public static final String INVALID_COMMAND = "Invalid Command: \"";
+    public static final String ROW_ID = "Row ID Included";
+    public static final String EXISTING_INDEX = "Index already Existing";
+    public static final String TABLE_NAME_INVALID = "Invalid Table Name";
+    public static final String COLUMN_NAME_INVALID = "Invalid Column Name";
+    public static final String CREATED_INDEX = "Index Created";
+    public static final String TABLE_DELETED = "Table Deleted";
+    public static final String TABLE_DOES_NOT_EXIST = "Table Does Not Exist";
+    public static final String INDEX_DELETED = "Index Deleted";
+    public static final String INDEX_DOES_NOT_EXIST = "Index Does Not Exist";
+    public static final String ERROR_SELECT_COLUMN = "Error in Selecting Column";
+    public static final String INSERT_ERROR = "Error inserting";
+    public static final String TABLE_CREATE_ERROR = "Table Creation Failed";
+
+
+
 
 
 
