@@ -1,4 +1,4 @@
-package Storage;
+
 
 public class TableRecordInteriorWorking {
     public int rowId;

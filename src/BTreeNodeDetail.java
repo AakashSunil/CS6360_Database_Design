@@ -1,8 +1,6 @@
-package Storage.Details;
+
 
 import java.util.List;
-
-import DBDetails.FieldFormat;
 
 public class BTreeNodeDetail {
     public FieldFormat indexValue;

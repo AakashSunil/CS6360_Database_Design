@@ -1,10 +1,6 @@
-package Storage.Details;
+
 
 import java.util.List;
-
-import DBDetails.DataFormat;
-import DBDetails.FieldFormat;
-import Utilities.ByteUtility;
 
 public class TableRecordDetails {
     public Byte noOfRowIds;

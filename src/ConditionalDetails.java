@@ -1,4 +1,4 @@
-package DBDetails;
+
 
 public class ConditionalDetails {
     public String columnName;

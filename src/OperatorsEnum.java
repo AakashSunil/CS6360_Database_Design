@@ -1,4 +1,4 @@
-package DBDetails;
+
 
 public enum OperatorsEnum {
     LESSTHAN,

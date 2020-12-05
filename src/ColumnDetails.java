@@ -1,8 +1,6 @@
-package DBDetails;
+
 
 import java.io.File;
-
-import Utilities.FileFunctions;
 
 public class ColumnDetails {
     public DataFormat datatype;

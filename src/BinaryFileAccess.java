@@ -1,5 +1,3 @@
-package Storage;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -8,17 +6,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import DBDetails.ColumnDetails;
-import DBDetails.ConditionalDetails;
-import DBDetails.DataFormat;
-import DBDetails.FieldFormat;
-import DBDetails.MetaData;
-import Storage.BTree.BPlusTree;
-import Storage.BTree.Page;
-import Storage.BTree.PageTrack;
-import Storage.BTree.PageType;
-import Utilities.FileFunctions;
 
 public class BinaryFileAccess {
     public static String columns_Table = "DavisBase_Columns";

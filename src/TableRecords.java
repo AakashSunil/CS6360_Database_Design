@@ -1,12 +1,8 @@
-package Storage;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import DBDetails.DataFormat;
-import DBDetails.FieldFormat;
-import Utilities.ByteUtility;
 
 public class TableRecords {
     public int row_ID;

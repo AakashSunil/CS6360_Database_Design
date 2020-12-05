@@ -1,10 +1,8 @@
-package DBDetails;
+
 
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import Utilities.ByteUtility;
 
 public class FieldFormat {
     public byte[] fieldValuebyte;

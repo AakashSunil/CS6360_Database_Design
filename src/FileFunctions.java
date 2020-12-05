@@ -1,11 +1,7 @@
-package Utilities;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import DBDetails.ConditionalDetails;
-import DBDetails.DataFormat;
-import DBDetails.MetaData;
 
 public class FileFunctions {
     public static String getTBLFile(String table_name) {

@@ -1,12 +1,6 @@
-package app;
 
 import java.io.File;
 import java.util.Scanner;
-
-import Storage.BinaryFileAccess;
-import Utilities.Commands;
-import Utilities.Settings;
-import Utilities.Statements;
 
 public class Application {
     public static void main(String args[]) {

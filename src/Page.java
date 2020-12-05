@@ -1,18 +1,10 @@
-package Storage.BTree;
+
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import DBDetails.ConditionalDetails;
-import DBDetails.DataFormat;
-import DBDetails.FieldFormat;
-import DBDetails.OperatorsEnum;
-import Storage.BinaryFileAccess;
-import Storage.Details.BTreeNodeDetail;
-import Storage.Details.TableRecordDetails;
 
 public class Page {
     PageTrack root;

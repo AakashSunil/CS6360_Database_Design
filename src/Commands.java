@@ -1,4 +1,4 @@
-package Utilities;
+
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -7,18 +7,6 @@ import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import DBDetails.ColumnDetails;
-import DBDetails.ConditionalDetails;
-import DBDetails.DataFormat;
-import DBDetails.FieldFormat;
-import DBDetails.MetaData;
-import Storage.BinaryFileAccess;
-import Storage.TableRecords;
-import Storage.BTree.BPlusTree;
-import Storage.BTree.Page;
-import Storage.BTree.PageTrack;
-import Storage.BTree.PageType;
 
 public class Commands {
     public static void parseUserCommand(String userCommand) {
