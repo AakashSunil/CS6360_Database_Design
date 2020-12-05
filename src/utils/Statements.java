@@ -2,12 +2,12 @@ package utils;
 
 public class Statements {
     public static final String EXIT = "Safely Exited from DavisBase.";
-    public static final String SYNTAX_ERROR = "--   Syntax Error";
-    public static final String TABLE_NAME_EMPTY = "--   Table Name Cannot be Empty";
-    public static final String ERROR_INSERTING = "--    Error while Inserting";
-    public static final String ERROR_CREATING_TABLE = "--   Error Creating Table";
-    public static final String INDEX_ERROR = "--    Error Creating Index";
-    public static final String INVALID_COMMAND = "--    Invalid Command: \"";
+    public static final String SYNTAX_ERROR = "Syntax Error";
+    public static final String TABLE_NAME_EMPTY = "Table Name Cannot be Empty";
+    public static final String ERROR_INSERTING = "Error while Inserting";
+    public static final String ERROR_CREATING_TABLE = "Error Creating Table";
+    public static final String INDEX_ERROR = "Error Creating Index";
+    public static final String INVALID_COMMAND = "Invalid Command: \"";
 
 
 
@@ -30,26 +30,24 @@ public class Statements {
         System.out.println(printSeparator("-", 90));
         System.out.println("Available commands");
 
-        System.out.println("-  HELP;");
-        System.out.println("\tShows all the available help commands");
-        System.out.println("-  CREATE TABLE <table_name> (<column_name>);");
-        System.out.println("\tLets you create table in the database");
-        System.out.println("-  INSERT INTO <table_name> (<column_list>) VALUES (<values_list>);");
-        System.out.println("\tInsert appropriate values into given table. Column List order should be same as at the time of creation.");
-        System.out.println("-  SELECT <column_list> FROM <table_name> [WHERE <condition>];");
-        System.out.println("\tDisplay the values from the table with or without a condition");
-        System.out.println("-  SHOW TABLES;");
-        System.out.println("\tDisplay all the available tables in the database");
-        System.out.println("-  DROP TABLE <table_name>;");
-        System.out.println("\tDeletes table from the database");
-        System.out.println("-  DELETE FROM TABLE <table_name> WHERE <condition>;");
-        System.out.println("\tDeletes specific table row table from the database");
-        System.out.println("-  UPDATE <table_name> SET <column_name> = <value> WHERE <condition>;");
-        System.out.println("\tUpdates particular column value in table from the database based on the condition;");
-        System.out.println("-  VERSION;");
-        System.out.println("\t Displays the Version of the software");
-        System.out.println("-  EXIT;");
-        System.out.println("\tSafely EXIT the Database");
+        System.out.println("help;");
+        System.out.println("Lists the available commands.\n");
+        System.out.println("create table <table_name> (<column_list>);");
+        System.out.println("Creates a table with the table name and the column list. No datatype is needed to be specified as all data is considered as string in thos database.\n");
+        System.out.println("insert into table <table_name> values (<values_list>);");
+        System.out.println("Inserts a record into the table. The values_list needs to be in the same order as the columns when the table was created.\n");
+        System.out.println("select <column_names> from <table_name> where <condition>;");
+        System.out.println("Displays the values of the column names specified as per condition. Condition works only on equality. Condition is Mandatory.\n");
+        System.out.println("show tables;");
+        System.out.println("Lists the available table names in the database in an array format.\n");
+        System.out.println("drop table <table_name>;");
+        System.out.println("Drops/Deletes the table from the database.\n");
+        System.out.println("delete from table <table_name> where <condition>;");
+        System.out.println("Deletes record from table based on the single condition.\n");
+        System.out.println("update <table_name> set <column_name> = <value> where <condition>;");
+        System.out.println("Updates the specific column based on the where condition. Only single column value and single equality condition.\n");
+        System.out.println("exit;");
+        System.out.println("Exits the Database safely.\n");
 
         System.out.println(printSeparator("-", 90));
     }

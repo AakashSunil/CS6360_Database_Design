@@ -73,9 +73,9 @@ public class Commands {
                 );
                 break;
             case "drop":
-                System.out.println("Drop");
+                // System.out.println("Drop");
                 String result_drop = parseDropTable(userCommand);
-                System.out.println(result_drop);
+                // System.out.println(result_drop);
                 database.dropTable(result_drop);
                 break;
             case "create":
@@ -86,7 +86,7 @@ public class Commands {
                         System.out.println(results_create[0]);
                     }
                     else {
-                        System.out.println(results_create[0]+"\n"+new ArrayList<>(Arrays.asList(results_create[1].split(","))));
+                        // System.out.println(results_create[0]+"\n"+new ArrayList<>(Arrays.asList(results_create[1].split(","))));
                         database.createTable(results_create[0], new ArrayList<>(Arrays.asList(results_create[1].split(","))));
                     }
                 }
@@ -94,13 +94,13 @@ public class Commands {
                     parseCreateIndex(userCommand);
                 break;
             case "insert":
-                System.out.println("Insert");
+                // System.out.println("Insert");
                 String[] result_insert = parseInsertTable(userCommand);
                 if(result_insert.length == 1) {
                     System.out.println((result_insert[0]));
                 }
                 else {
-                    System.out.println(result_insert[0]+"\n"+new ArrayList<>(Arrays.asList(result_insert[1].split(","))));
+                    // System.out.println(result_insert[0]+"\n"+new ArrayList<>(Arrays.asList(result_insert[1].split(","))));
                     database.insertRowIntoTable(result_insert[0], new ArrayList<>(Arrays.asList(result_insert[1].split(","))));
                 }
                 break;
@@ -111,18 +111,18 @@ public class Commands {
                     System.out.println(result_update[0]);
                 }
                 else {
-                    System.out.println(result_update[0]+"\n"+ result_update[1]+"\n"+ result_update[2]+"\n"+ result_update[3]+"\n"+ result_update[4]);
+                    // System.out.println(result_update[0]+"\n"+ result_update[1]+"\n"+ result_update[2]+"\n"+ result_update[3]+"\n"+ result_update[4]);
                     database.updateRowsInTable(result_update[0], result_update[1],result_update[2], result_update[3], result_update[4]);
                 }
                 break;
             case "delete":
-                System.out.println("Delete");
+                // System.out.println("Delete");
                 String[] result_delete = parseDeleteTable(userCommand);
                 if(result_delete.length == 1){
                     System.out.println(result_delete[0]);
                 }
                 else {
-                    System.out.println(result_delete[0]+"\n"+ result_delete[1]+"\n"+ result_delete[2]);
+                    // System.out.println(result_delete[0]+"\n"+ result_delete[1]+"\n"+ result_delete[2]);
                     database.deleteRowsFromTable(result_delete[0], result_delete[1], result_delete[2]);
                 }
                 break;
@@ -134,7 +134,7 @@ public class Commands {
                 break;
             case "exit":
             case "quit":
-                System.out.println("Quit");
+                // System.out.println("Quit");
                 database.exit();
                 Settings.setExit(true);
                 break;
@@ -152,7 +152,7 @@ public class Commands {
         ArrayList<String> initialSplit = new ArrayList<String>(Arrays.asList(command.split("\\(")));
         String first_part = initialSplit.get(0);
         String columns = initialSplit.get(1);
-        System.out.println(first_part+"\n"+columns);
+        // System.out.println(first_part+"\n"+columns);
 
         ArrayList<String> createTableTokens = new ArrayList<String>(Arrays.asList(command.split(" ")));
         int i =0;
@@ -244,7 +244,7 @@ public class Commands {
 
         ArrayList<String> dropTableTokens = new ArrayList<String>(Arrays.asList(command.split(" ")));
         String tableName = dropTableTokens.get(2);
-        System.out.println(tableName);
+        // System.out.println(tableName);
         return tableName;
     }
 
@@ -332,8 +332,8 @@ public class Commands {
             String columnName = command
                     .substring(command.indexOf("(") + 1, command.indexOf(")")).trim();
 
-            System.out.println(tableName);
-            System.out.println(columnName);
+            // System.out.println(tableName);
+            // System.out.println(columnName);
             
         } catch (Exception e) {
 
